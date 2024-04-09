@@ -83,7 +83,7 @@ public class PlayerLogic : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Lock Zone")
+        if (col.gameObject.Equals("Lock Zone"))
         {
             Vector2 colPos = (Vector2)col.gameObject.transform.position;
             string[] axes = {colPos.x.ToString(), colPos.y.ToString()};
@@ -93,6 +93,6 @@ public class PlayerLogic : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Lock Zone") MessengerBus.messenger.Broadcast("LockZoneExited");
+        if (col.gameObject.tag.Equals("Lock Zone")) MessengerBus.messenger.Broadcast("LockZoneExited");
     }
 }

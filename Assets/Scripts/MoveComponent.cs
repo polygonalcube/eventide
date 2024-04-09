@@ -10,7 +10,7 @@ public class MoveComponent : MonoBehaviour
     public float decel;
 	public Vector2 maxSpeed; // The maximum speed for each axis of movement.
 
-    Vector2 speed; // The current movement speed of the object.
+    [HideInInspector] public Vector2 Speed; // The current movement speed of the object.
 
     // A version of Mathf.Sign() that can return 0.
     int Sign(float num)
@@ -37,13 +37,13 @@ public class MoveComponent : MonoBehaviour
     public Vector2 Move(Vector2 moveDir, float delta)
     {
         // acceleration & deceleration
-		speed.x = (Mathf.Abs(moveDir.x) != 0f) ? Accelerate(speed.x, moveDir.x, delta) : Decelerate(speed.x, delta);
-        speed.y = (Mathf.Abs(moveDir.y) != 0f) ? Accelerate(speed.y, moveDir.y, delta) : Decelerate(speed.y, delta);
+		Speed.x = (Mathf.Abs(moveDir.x) != 0f) ? Accelerate(Speed.x, moveDir.x, delta) : Decelerate(Speed.x, delta);
+        Speed.y = (Mathf.Abs(moveDir.y) != 0f) ? Accelerate(Speed.y, moveDir.y, delta) : Decelerate(Speed.y, delta);
 
 		// prevents the object from going too fast
-		speed.x = Cap(speed.x, maxSpeed.x, moveDir.x);
-        speed.y = Cap(speed.y, maxSpeed.y, moveDir.y);
+		Speed.x = Cap(Speed.x, maxSpeed.x, moveDir.x);
+        Speed.y = Cap(Speed.y, maxSpeed.y, moveDir.y);
 
-		return new Vector2(speed.x, speed.y) * delta;
+		return new Vector2(Speed.x, Speed.y) * delta;
     }
 }

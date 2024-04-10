@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1729151801029045523}
   - component: {fileID: 2606119009741097108}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CameraLockZone
   m_TagString: Lock Zone
   m_Icon: {fileID: 0}

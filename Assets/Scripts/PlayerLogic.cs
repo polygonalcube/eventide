@@ -83,7 +83,8 @@ public class PlayerLogic : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.Equals("Lock Zone"))
+        LayerMask camLockZoneLayer = LayerMask.NameToLayer("Camera Lock Zones");
+        if (col.gameObject.layer == camLockZoneLayer)
         {
             Vector2 colPos = (Vector2)col.gameObject.transform.position;
             string[] axes = {colPos.x.ToString(), colPos.y.ToString()};
@@ -93,6 +94,7 @@ public class PlayerLogic : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D col)
     {
-        if (col.gameObject.tag.Equals("Lock Zone")) MessengerBus.messenger.Broadcast("LockZoneExited");
+        LayerMask camLockZoneLayer = LayerMask.NameToLayer("Camera Lock Zones");
+        if (col.gameObject.layer == camLockZoneLayer) MessengerBus.messenger.Broadcast("LockZoneExited");
     }
 }

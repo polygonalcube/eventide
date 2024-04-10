@@ -653,6 +653,7 @@ MonoBehaviour:
   accel: 4
   decel: 4
   maxSpeed: {x: 4, y: 4}
+  Speed: {x: 0, y: 0}
 --- !u!114 &3558893018062303322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -666,7 +667,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sr: {fileID: 2025843113926433179}
-  animations:
+  anims:
+  - State: 1
+    Frames:
+    - {fileID: 899244640, guid: 2152d5540b7a7c541aa8791087dfdd9b, type: 3}
+    - {fileID: -1950703449, guid: 2152d5540b7a7c541aa8791087dfdd9b, type: 3}
+    - {fileID: 414223856, guid: 2152d5540b7a7c541aa8791087dfdd9b, type: 3}
+    - {fileID: 1759091527, guid: 2152d5540b7a7c541aa8791087dfdd9b, type: 3}
+  - State: 0
+    Frames:
+    - {fileID: -836439805, guid: 231c34815f510214e9c3451766506d58, type: 3}
+    - {fileID: -353975396, guid: 231c34815f510214e9c3451766506d58, type: 3}
+    - {fileID: -1305349063, guid: 231c34815f510214e9c3451766506d58, type: 3}
+    - {fileID: 1124055433, guid: 231c34815f510214e9c3451766506d58, type: 3}
   - State: 2
     Frames:
     - {fileID: -1340479690, guid: eace4971bd5c0b542b62164b48e65e66, type: 3}
@@ -680,18 +693,6 @@ MonoBehaviour:
     - {fileID: -1038921507, guid: 8893070efba76c84cb0c74af6a60f65e, type: 3}
     - {fileID: 518517392, guid: 8893070efba76c84cb0c74af6a60f65e, type: 3}
     - {fileID: -96812003, guid: 8893070efba76c84cb0c74af6a60f65e, type: 3}
-  - State: 1
-    Frames:
-    - {fileID: 899244640, guid: 2152d5540b7a7c541aa8791087dfdd9b, type: 3}
-    - {fileID: -1950703449, guid: 2152d5540b7a7c541aa8791087dfdd9b, type: 3}
-    - {fileID: 414223856, guid: 2152d5540b7a7c541aa8791087dfdd9b, type: 3}
-    - {fileID: 1759091527, guid: 2152d5540b7a7c541aa8791087dfdd9b, type: 3}
-  - State: 0
-    Frames:
-    - {fileID: -836439805, guid: 231c34815f510214e9c3451766506d58, type: 3}
-    - {fileID: -353975396, guid: 231c34815f510214e9c3451766506d58, type: 3}
-    - {fileID: -1305349063, guid: 231c34815f510214e9c3451766506d58, type: 3}
-    - {fileID: 1124055433, guid: 231c34815f510214e9c3451766506d58, type: 3}
 --- !u!50 &7495883571878024030
 Rigidbody2D:
   serializedVersion: 4

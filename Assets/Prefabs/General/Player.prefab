@@ -601,6 +601,46 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Movement
       m_Flags: 8
+    - m_Name: Arrow Keys
+      m_Id: 759c9c6a-203a-47a0-95f8-4746e6721b23
+      m_Path: 2DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 4
+    - m_Name: up
+      m_Id: 18e36d46-4f34-4cdb-ae3a-0ae269f315b7
+      m_Path: <Keyboard>/upArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 8
+    - m_Name: down
+      m_Id: b8abf1b8-b615-4dea-948e-b90dd10997da
+      m_Path: <Keyboard>/downArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 8
+    - m_Name: left
+      m_Id: c8483a2f-3000-442c-8cfd-67b9cf4343ee
+      m_Path: <Keyboard>/leftArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 8
+    - m_Name: right
+      m_Id: 0cd2a655-6191-49ae-98b3-8ab8038ba465
+      m_Path: <Keyboard>/rightArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 8
     m_Flags: 0
   movValue: {x: 0, y: 0}
   shining:
